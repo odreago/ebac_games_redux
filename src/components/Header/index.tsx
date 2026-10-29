@@ -1,19 +1,16 @@
-import * as S from './styles'
+import * as S from './styles';
+import { useSelector } from 'react-redux';
+import cesta from '../../assets/cesta.png';
+import { paraReal } from '../Produto';
+import { RootReducer } from '../../store';
 
-import { Game } from '../../App'
+const Header = () => {
+  const itens = useSelector((state: RootReducer) => state.carrinho.itens);
 
-import cesta from '../../assets/cesta.png'
-import { paraReal } from '../Produto'
-
-type Props = {
-  itensNoCarrinho: Game[]
-}
-
-const Header = ({ itensNoCarrinho }: Props) => {
-  const valorTotal = itensNoCarrinho.reduce((acc, item) => {
-    acc += item.preco
-    return acc
-  }, 0)
+  const valorTotal = itens.reduce((acc, item) => {
+    acc += item.preco;
+    return acc;
+  }, 0);
 
   return (
     <S.Header>
@@ -21,11 +18,11 @@ const Header = ({ itensNoCarrinho }: Props) => {
       <div>
         <img src={cesta} />
         <span>
-          {itensNoCarrinho.length} itens, valor total: {paraReal(valorTotal)}
+          {itens.length} itens, valor total: {paraReal(valorTotal)}
         </span>
       </div>
     </S.Header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

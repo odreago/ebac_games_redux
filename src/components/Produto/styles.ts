@@ -1,10 +1,10 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
-import { cores } from '../../styles'
+import { cores } from '../../styles';
 
-export const Produto = styled.div``
+export const Produto = styled.div``;
 
-export const Titulo = styled.h3``
+export const Titulo = styled.h3``;
 
 export const Capa = styled.div`
   position: relative;
@@ -14,7 +14,7 @@ export const Capa = styled.div`
     width: 100%;
     margin-bottom: 8px;
   }
-`
+`;
 
 export const Prices = styled.div`
   margin: 16px 0;
@@ -30,7 +30,7 @@ export const Prices = styled.div`
   strong {
     font-size: 18px;
   }
-`
+`;
 
 export const Tag = styled.span`
   background-color: ${cores.corPrincipal};
@@ -41,7 +41,7 @@ export const Tag = styled.span`
   font-size: 12px;
   font-weight: 700;
   color: #fff;
-`
+`;
 export const Plataformas = styled.ul`
   display: flex;
   flex-wrap: wrap;
@@ -57,7 +57,7 @@ export const Plataformas = styled.ul`
     color: #fff;
     font-weight: bold;
   }
-`
+`;
 export const BtnComprar = styled.button`
   display: block;
   width: 100%;
@@ -82,4 +82,4 @@ export const BtnComprar = styled.button`
       ${cores.corSecundaria}
     );
   }
-`
+`;
